@@ -8,9 +8,26 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "pip (>=25.1.1,<26.0.0)",
+    "requests (>=2.32.3,<3.0.0)",
+    "psycopg2 (>=2.9.10,<3.0.0)"
 ]
 
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.lint.dependencies]
+flake8 = "^7.2.0"
+black = "^25.1.0"
+isort = "^6.0.1"
+mypy = "^1.15.0"
+types-requests = "^2.32.0.20250515"
+types-psycopg2 = "^2.9.21.20250516"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+pytest-cov = "^6.1.1"
+
